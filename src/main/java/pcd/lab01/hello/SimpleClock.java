@@ -24,6 +24,8 @@ public class SimpleClock extends Thread {
 	
 	public void notifyStop() {
 		stopped = true;
+		//se il thread è in sleep, viene risvegliato e genera l'eccezione interrupt exception.
+		//ha effetto solo se il thread è in sleep, senno non ha effetto
 		interrupt();
 	}
 	
